@@ -1,0 +1,107 @@
+/*Use this site for CSS references
+https://cssreference.io/
+*/
+.starry_background {
+	/*Background Color 
+	sets the color of the containers background
+	background-color: red;
+	*/
+	/*Background Image
+	same as above but instead uses an image as the background
+	*/
+	background-image: url("../images/outer-space.jpg");
+	/*Color
+	sets the color of the text inside a container
+	*/
+	color: white;
+}
+
+.section_planets {
+	background-color: transparent;
+	color: transparent;
+	/*Transition
+	Defines a propery to "transition" from one value
+	to another based on some event such as the hover
+	for example colo is transitions from one to another 
+	within 4 seconds*/
+	transition: color 4s;
+	margin-bottom: 20%;
+}
+/*
+:hover
+used to specify a set of rules when an element is being hovered
+*/
+.section_planets:hover {
+	color: white;
+}
+
+.section_planets:hover .image_right {
+	float: right;
+	animation-name: none;
+}
+.section_planets:hover .image_left {   
+	float: left;
+	animation-name: none;
+}
+
+.center_text {
+	text-align: center;
+}
+.margin_top_big {
+	margin-top: 650px;
+}
+
+.planet_heading_text_right {
+	text-align: right;
+	font-size: 24px;
+	margin-right: 100px;
+	background-color: transparent;
+	color: white;
+}
+
+.planet_heading_text_left {
+	text-align: left;
+	font-size: 24px;
+	margin-left: 100px;
+	background-color: transparent;
+	color: white;
+}
+
+.planet_description_text {
+	font-size: 24px;
+}
+
+.image_right {
+	/*
+	Float 
+	positions an item to the left or right of its container
+	allowing text to wrap around it
+	*/
+	float: right;
+	/*References a keyframe defined below*/
+	animation-name: spin;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.image_right:hover {
+	outline: 2px solid white;
+	cursor: pointer;
+}
+
+.image_left {
+	float: left;
+	animation-name: spin;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.image_left:hover {
+	outline: 2px solid white;
+	cursor: pointer;
+}
+
+@keyframes spin {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
